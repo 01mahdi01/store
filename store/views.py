@@ -49,7 +49,7 @@ class ProductsListMostPopular(APIView):
         most_popular_queryset = Likes.objects.values('product__title', 'product__id').annotate(
             likes_count=Count('id'),
             date_liked=TruncDate('date_liked')
-        ).order_by('-likes_count')
+        ).order_by('-date_liked')
         return Response({
             "most_popular_queryset": most_popular_queryset
 
