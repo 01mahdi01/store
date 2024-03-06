@@ -1,0 +1,6 @@
+django
+mysqlclient
+django-filter
+djangorestframework
+django-rest-swagger
+django-debug-toolbar
